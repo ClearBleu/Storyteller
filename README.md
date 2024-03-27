@@ -1,4 +1,4 @@
-# Storyteller ADventrue Discord Bot
+# Storyteller Adventure Discord Bot
 This is a project that is very close to my heart. As a developer, I see my self first and foremost as a problem solver. 
 My daughter loves stories, especially "scary" stories. I wanted to give her a fun way to enjoy stories that were made just for her, and this 
 project was the result. I originally wrote this using Python and used public domain stories that were randomly selected for her.
