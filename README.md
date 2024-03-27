@@ -8,7 +8,7 @@ she made (very mush like the old-school books that would have you flip to page 2
 This project is the result of those efforts, and I hope it can inspire others to make things for people in their lives. I heard a long time ago that
 if you want to create something, make it for someone that you love, and it will always come out perfect. I hope you all enjoy.
 
-Feel free to fork and add anything that you wish, or to even use a boiler plate for some other Discord bot project you may have in mind.
+Feel free to fork and add anything that you wish, or to even use as a boiler plate for some other Discord bot project you may have in mind.
 
 # How to get started
 1. You will need to create a Discord application using a Discord Developer account
