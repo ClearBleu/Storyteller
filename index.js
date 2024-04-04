@@ -26,7 +26,6 @@ client.on('messageCreate', (message) =>{
         return
     }
     
-    // All prompts from user and replies from bot
     switch (message.content) {
         case "hello": message.reply('hello, are you ready to get started with our Halloween adventure?')
             break;
@@ -156,7 +155,7 @@ client.on('messageCreate', (message) =>{
         case 'give her the dog back': message.reply('"Thank you so much for giving my little Booger a warm home for the night. If you stop by my house on Halloween, I\'ll give you the biggest candy bars the store has to offer!')
             break;
 
-        case '!help': message.reply('`I\'m a Ghost-bot here to tell you a SPECIAL story made just for you. Just try typing "hello" or "ready" to get started with your special story! The intended responses to each part of the story are at the end of the segment. They are seperated by "or" if there are options to choose from, or written in italics. Type the response to hear the next part. IF there are no choices or actions to take, that\'s the end. Enjoy!`')
+        case '!help': message.reply('`I\'m a Ghost-bot here to tell you a SPECIAL story made just for you. Just try typing "hello" or "ready" to get started with your special story! The intended responses to each part of the story are at the end of the segment. They are seperated by "or" if there are options to choose from, or written in italics. Type the response to hear the next part. If there are no choices or actions to take, that\'s the end. Enjoy!`')
             break;
 
         default: message.reply('I didn\'t understand what you wrote. Try typing "!help".')
