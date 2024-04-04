@@ -1,8 +1,7 @@
 import dotenv from "dotenv";
-import * as pkg from "discord.js";
+import { Client, IntentsBitField } from "discord.js";
 
-const { Client, IntentsBitField } = pkg;
-
+// Start new instance with Discord API
 const client = new Client({
     intents: [
         IntentsBitField.Flags.Guilds,
@@ -12,21 +11,24 @@ const client = new Client({
     ],
 });
 
-
+// Initiate .env file
 dotenv.config();
 const token = process.env.TOKEN;
 
+// return message when successfully connected to Discord
 client.on('ready', readyClient => {
     console.log(`Ready! Logged in as ${readyClient.user.tag}`);
 });
 
 client.on('messageCreate', (message) =>{
+    // Prevent infinite loops of bot self replying
     if (message.author.bot){
         return
     }
     
+    // All prompts from user and replies from bot
     switch (message.content) {
-        case "hello": message.reply('hello')
+        case "hello": message.reply('hello, are you ready to get started with our Halloween adventure?')
             break;
 
         case 'ready': message.reply('Its a fall night and a chill is in the air… Leaves blow across the ground and the sun is beginning to set. In your neighborhood, the shadows of the houses grows long. You hear a familiar voice calling out, but you can\'t understand what they are saying… Do you go to see who is calling? Yes, go and see or no, head back home?');
@@ -156,12 +158,12 @@ client.on('messageCreate', (message) =>{
 
         case '!help': message.reply('`I\'m a Ghost-bot here to tell you a SPECIAL story made just for you. Just try typing "hello" or "ready" to get started with your special story! The intended responses to each part of the story are at the end of the segment. They are seperated by "or" if there are options to choose from, or written in italics. Type the response to hear the next part. IF there are no choices or actions to take, that\'s the end. Enjoy!`')
             break;
-            
+
         default: message.reply('I didn\'t understand what you wrote. Try typing "!help".')
             break;
     }
 
 })
 
-
+// Use token to log in to Discord through API
 client.login(token);
